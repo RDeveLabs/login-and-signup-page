@@ -17,7 +17,7 @@ document.getElementById('submit').addEventListener('click', async (e) => {
             body: form
         })
 
-        const status = await res.text();
+        const status = res.data;
         console.log(form);
         console.log(status);
     }catch(e){
