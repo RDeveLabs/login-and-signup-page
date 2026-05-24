@@ -5,7 +5,7 @@ document.getElementById('submit').addEventListener('click', async (e) => {
     const password = document.getElementById('password').value;
 
     try{
-        const res = await fetch('http://belajar.rdevelabs.biz.id/data',{
+        const res = await fetch('https://belajar.rdevelabs.biz.id/data',{
             method: 'POST',
             headers: {'Content-Type' : 'application/json'},
             body: JSON.stringify({username, password})
