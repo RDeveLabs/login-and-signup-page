@@ -15,6 +15,7 @@ document.getElementById('submit').addEventListener('click', async (e) => {
         })
 
         const status = await res.text();
+        console.log(form);
         console.log(status);
     }catch(e){
         console.log("Ada error: " + e);
