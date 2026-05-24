@@ -6,7 +6,7 @@ document.getElementById('submit').addEventListener('click', async (e) => {
 
     
     try{
-        const form = new FormData(username);
+        const form = new FormData("username", username);
         form.append("password", password);
         const res = await fetch('https://belajar.rdevelabs.biz.id/data',{
             method: 'POST',
