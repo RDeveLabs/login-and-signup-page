@@ -4,11 +4,15 @@ document.getElementById('submit').addEventListener('click', async (e) => {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
+    const form = new FormData();
+    form.append(username);
+    form.append(password);
+
     try{
         const res = await fetch('https://belajar.rdevelabs.biz.id/data',{
             method: 'POST',
             headers: {'Content-Type' : 'application/json'},
-            body: JSON.stringify({username, password})
+            body: form
         })
 
         const status = await res.text();
