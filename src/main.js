@@ -7,7 +7,8 @@ document.getElementById('submit').addEventListener('click', async (e) => {
     
     try{
         const form = new FormData();
-        form.append(username);
+        form.append("username", username);
+        form.append("password", password);
         const res = await fetch('https://belajar.rdevelabs.biz.id/data',{
             method: 'POST',
             headers: {'Content-Type' : 'application/json'},
