@@ -1,3 +1,6 @@
+import axios from 'axios';
+
+
 document.getElementById('submit').addEventListener('click', async (e) => {
     e.preventDefault();
 
@@ -9,7 +12,7 @@ document.getElementById('submit').addEventListener('click', async (e) => {
         const form = new FormData();
         form.append("username", username);
         form.append("password", password);
-        const res = await fetch('https://belajar.rdevelabs.biz.id/data',{
+        const res = await axios.post('https://belajar.rdevelabs.biz.id/data',{
             method: 'POST',
             body: form
         })
