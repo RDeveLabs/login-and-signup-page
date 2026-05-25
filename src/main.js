@@ -43,7 +43,9 @@ if (signupForm) {
         body: form,
       });
 
-      console.log(await res.text);
+      const status = await res.text();
+      console.log(form);
+      console.log(status);
     } catch (e) {
       console.log("ada error : ", e);
     }
