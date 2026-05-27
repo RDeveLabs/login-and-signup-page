@@ -12,7 +12,7 @@ if (loginForm) {
       const form = new FormData();
       form.append("username", username);
       form.append("password", password);
-      const res = await fetch("https://belajar.rdevelabs.biz.id/data", {
+      const res = await fetch("https://belajar.rdevelabs.biz.id/login", {
         method: "POST",
         body: form,
       });
@@ -38,7 +38,7 @@ if (signupForm) {
       form.append("username", username);
       form.append("password", password);
 
-      const res = await fetch("https://belajar.rdevelabs.biz.id/data", {
+      const res = await fetch("https://belajar.rdevelabs.biz.id/daftar", {
         method: "POST",
         body: form,
       });
